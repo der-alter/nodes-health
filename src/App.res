@@ -20,7 +20,6 @@ ul {
 
 let nodes = [
   /* "http://localhost:20000", */
-  "https://rpc.tzstats.com",
   "https://mainnet.smartpy.io",
   "https://hangzhounet.smartpy.io",
   "https://mainnet.api.tez.ie",
