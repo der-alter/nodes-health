@@ -9,7 +9,6 @@ html {
 body {
   padding: 0; 
   margin: 0;
-  color: royalblue;
   background-color: darkslategray;
 }
 ul {

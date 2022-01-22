@@ -3,18 +3,14 @@ module Styles = {
   let container = css({
     "display": "flex",
     "margin": "4ex auto",
-    "maxWidth": "768px",
     "width": "100%",
-    "flexDirection": "row",
     "justifyContent": "center",
-    "alignItems": "center",
     "marginBottom": "5ex",
   })
   let title = css({
     "color": "floralwhite",
     "fontSize": "1.2em",
     "fontWeight": 500,
-    "paddingLeft": "2ch",
   })
 }
 

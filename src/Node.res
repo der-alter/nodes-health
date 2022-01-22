@@ -32,7 +32,7 @@ let svgOk =
 let make = (~baseUrl) => {
   let (results, setResults) = React.useState(() => AsyncData.NotAsked)
 
-  React.useEffect1(() => {
+  React.useEffect0(() => {
     setResults(_ => Loading)
     let _ =
       Request.make(
@@ -41,7 +41,7 @@ let make = (~baseUrl) => {
         (),
       )->Future.get(payload => setResults(_ => Done(payload)))
     None
-  }, [baseUrl])
+  })
 
   <div className={Styles.container}>
     <a href="{baseUrl->React.string}" className={Styles.link}> {baseUrl->React.string} </a>
@@ -49,11 +49,7 @@ let make = (~baseUrl) => {
     | NotAsked => React.null
     | Loading => <LoadingIndicator />
     | Done(Error(_)) => svgKo
-    | Done(Ok({ok})) =>
-      switch ok {
-      | true => svgOk
-      | false => svgKo
-      }
+    | Done(Ok({ok})) => ok ? svgOk : svgKo
     }}
   </div>
 }
