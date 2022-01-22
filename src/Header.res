@@ -2,14 +2,13 @@ module Styles = {
   open Emotion
   let container = css({
     "display": "flex",
-    "margin": "4ex auto",
-    "width": "100%",
+    "margin": "var(--s1) auto",
+    "marginBottom": "var(--s2)",
     "justifyContent": "center",
-    "marginBottom": "5ex",
   })
   let title = css({
     "color": "floralwhite",
-    "fontSize": "1.2em",
+    "fontSize": "var(--s1)",
     "fontWeight": 500,
   })
 }

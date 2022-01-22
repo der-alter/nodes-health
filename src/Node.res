@@ -3,8 +3,8 @@ module Styles = {
   let container = css({
     "display": "flex",
     "justifyContent": "center",
-    "gap": "1ch",
-    "marginBottom": "1ex",
+    "gap": "var(--s-1)",
+    "marginBottom": "var(--s-1)",
   })
   let link = css({
     "color": "cornflowerblue",
@@ -16,16 +16,16 @@ let svgKo =
   <SVGIconKo
     style={ReactDOM.Style.make(~overflow="visible", ~display="block", ())}
     fill="indianred"
-    height="15"
-    width="15"
+    height="1em"
+    width="1em"
   />
 
 let svgOk =
   <SVGIconOk
     style={ReactDOM.Style.make(~overflow="visible", ~display="block", ())}
     fill="yellowgreen"
-    height="15"
-    width="15"
+    height="1em"
+    width="1em"
   />
 
 @react.component

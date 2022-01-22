@@ -1,10 +1,26 @@
 Emotion.injectGlobal(`
+:root {
+  --ratio: 1.61803398875;
+  --s-5: calc(var(--s-4) / var(--ratio));
+  --s-4: calc(var(--s-3) / var(--ratio));
+  --s-3: calc(var(--s-2) / var(--ratio));
+  --s-2: calc(var(--s-1) / var(--ratio));
+  --s-1: calc(var(--s0) / var(--ratio));
+  --s0: 1rem;
+  --s1: calc(var(--s0) * var(--ratio));
+  --s2: calc(var(--s1) * var(--ratio));
+  --s3: calc(var(--s2) * var(--ratio));
+  --s4: calc(var(--s3) * var(--ratio));
+  --s5: calc(var(--s4) * var(--ratio));
+}
+* {
+  box-sizing: border-box;
+}
 html {
   padding: 0;
   margin: 0;
   height: -webkit-fill-available;
   font-family: sans-serif;
-  box-sizing: border-box;
 }
 body {
   padding: 0; 
@@ -13,8 +29,7 @@ body {
 }
 ul {
   list-style: none;
-}
-#root {
+  font-size: var(--s0);
 }`)
 
 let nodes = [
