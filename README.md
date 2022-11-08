@@ -5,13 +5,20 @@ Simple page to check nodes health
 ## Install
 
 ```
-yarn
+pnpm i
 ```
 
 ## Dev
 
 ```sh
-yarn start
+pnpm start
 ```
+
+## Deployment
+
+Now deployed with [actions-gh-pages](https://github.com/peaceiris/actions-gh-pages)
+
+- Create a `gh-pages` branch
+- configure the repo to Deploy from this branch
 
 This project is based on a [template](https://github.com/jihchi/vitejs-template-react-rescript)
