@@ -1,17 +1,14 @@
 {
-  "name": "rescript-react-starter-kit",
-  "reason": {
-    "react-jsx": 3
-  },
+  "name": "vite-react-rescript-starter",
   "sources": [
     {
       "dir": "src",
       "subdirs": true
     },
     {
-      "dir": "test",
-      "subdirs": true,
-      "type": "dev"
+      "dir": "tests",
+      "type": "dev",
+      "subdirs": true
     }
   ],
   "package-specs": [
@@ -20,15 +17,20 @@
       "in-source": true
     }
   ],
-  "suffix": ".mjs",
+  "suffix": ".bs.js",
+  "reason": {
+    "react-jsx": 3
+  },
   "bs-dependencies": [
+    "@rescript/react",
+    "@ryyppy/rescript-promise",
     "@rescript/react",
     "rescript-future",
     "rescript-request",
     "rescript-asyncdata",
-    "@ryyppy/rescript-promise",
-    "rescript-js"
+    "rescript-webapi"
   ],
-  "bs-dev-dependencies": ["rescript-test"],
-  "bsc-flags": ["-open Belt", "-open ReScriptJs__Js"]
+  "bs-dev-dependencies": [
+    "rescript-vitest"
+  ]
 }

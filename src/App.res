@@ -23,28 +23,29 @@ html {
   font-family: sans-serif;
 }
 body {
-  padding: 0; 
+  padding: 0;
   margin: 0;
-  background-color: darkslategray;
+  background-color: #333;
 }
 ul {
+  margin: 0 auto;
+  max-width: 50%;
   list-style: none;
   font-size: var(--s0);
 }`)
 
 let nodes = [
-  /* "http://localhost:20000", */
+  "http://localhost:20000",
   "https://mainnet.smartpy.io",
-  "https://hangzhounet.smartpy.io",
+  "https://ghostnet.smartpy.io",
+  "https://rpc.ghostnet.teztnets.xyz",
   "https://mainnet.api.tez.ie",
-  "https://hangzhounet.api.tez.ie",
-  "https://testnet.pezos.fi",
-  "https://mainnet.pezos.fi",
+  "https://rpc.tzbeta.net",
+  "https://ghostnet.ecadinfra.com",
 ]
 
-module App = {
-  @react.component
-  let make = () => {
+@react.component
+let make = () => {
     <>
       <Header />
       <ul>
@@ -55,10 +56,4 @@ module App = {
         )}
       </ul>
     </>
-  }
-}
-
-switch ReactDOM.querySelector("#root") {
-| Some(root) => ReactDOM.render(<App />, root)
-| None => Console.error("Missing #root element")
 }

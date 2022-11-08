@@ -2,9 +2,16 @@
 
 Simple page to check nodes health
 
+## Install
+
+```
+yarn
+```
+
 ## Dev
 
 ```sh
-yarn start 
-yarn server
+yarn start
 ```
+
+This project is based on a [template](https://github.com/jihchi/vitejs-template-react-rescript)
