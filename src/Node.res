@@ -28,10 +28,18 @@ module Styles = {
     },
   })
   let error = css({
+    "display": "none"
+    "@media (min-width: 428px)": {
+      "display": "inline"
+    },
     "color": "indianred",
     "paddingLeft": "var(--s-1)",
   })
   let success = css({
+    "display": "none"
+    "@media (min-width: 428px)": {
+      "display": "inline"
+    },
     "color": "yellowgreen",
     "paddingLeft": "var(--s-1)",
   })

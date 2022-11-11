@@ -29,7 +29,10 @@ body {
 }
 ul {
   margin: 0 auto;
-  max-width: 50%;
+  padding: 0;
+  @media (min-width: 428px) {
+    max-width: 50%;
+  }
   list-style: none;
   font-size: var(--s0);
 }`)
@@ -46,14 +49,16 @@ let nodes = [
 
 @react.component
 let make = () => {
-    <>
-      <Header />
-      <ul>
-        {React.array(
-          Belt.Array.mapWithIndex(nodes, (i, baseUrl) =>
-            <li key={Belt.Int.toString(i)}> <Node baseUrl /> </li>
-          ),
-        )}
-      </ul>
-    </>
+  <>
+    <Header />
+    <ul>
+      {React.array(
+        Belt.Array.mapWithIndex(nodes, (i, baseUrl) =>
+          <li key={Belt.Int.toString(i)}>
+            <Node baseUrl />
+          </li>
+        ),
+      )}
+    </ul>
+  </>
 }
